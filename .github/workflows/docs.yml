@@ -19,7 +19,7 @@ jobs:
         with:
           activate-environment: dcdft
           environment-file: requirements/requirements-base-cpu.yml
-          python-version: 3.10
+          python-version: "3.10"
           auto-activate: true
 
       - name: Install docs dependencies
