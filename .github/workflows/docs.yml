@@ -1,0 +1,31 @@
+name: Documentation
+
+on:
+  branches:
+    - master
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: dcdft
+          environment-file: requirements/requirements-base-cpu.yml
+          python-version: 3.10
+          auto-activate: true
+
+      - name: Install docs dependencies
+        shell: bash -el {0}
+        run: pip install -r requirements/requirements-docs.txt
+
+      - name: Install package
+        shell: bash -el {0}
+        run: pip install -e .
+
+      - name: Build HTML docs
+        shell: bash -el {0}
+        run: sphinx-build -b html docs/ docs/_build/html -W --keep-going
