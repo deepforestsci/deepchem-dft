@@ -33,6 +33,8 @@ DeepChem DFT is part of the `DeepChem`_ family of scientific machine-learning to
    :maxdepth: 1
    :caption: API Reference
 
+   api_reference/index
+
 .. toctree::
    :glob:
    :maxdepth: 1
