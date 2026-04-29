@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepchem-dft"
+version = "0.0.1.dev0"
+description = ""
+requires-python = ">=3.10"
+keywords = []
+dependencies = []
+
+[tool.setuptools]
+packages = { find = { exclude = ["*test*"] } }
