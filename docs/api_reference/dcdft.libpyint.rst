@@ -1,7 +1,7 @@
-dcdft.LibPyInt
+dcdft.libpyint
 ==============
 
-.. automodule:: dcdft.LibPyInt
+.. automodule:: dcdft.libpyint
    :members:
    :undoc-members:
    :show-inheritance:
