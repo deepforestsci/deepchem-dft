@@ -1,8 +1,12 @@
 name: Documentation
 
 on:
-  branches:
-    - master
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-docs:
